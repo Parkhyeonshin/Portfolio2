@@ -1043,6 +1043,13 @@
         <script>
             // 드래그 막기
             window.document.ondragstart = new Function("return false");
+            window.addEventListener("pageshow", (event) => {
+                if (event.persisted) {
+                    alert("The page was cached by the browser");
+                } else {
+                    alert("The page was NOT cached by the browser");
+                }
+            });
         </script>
     </body>
 </html>
