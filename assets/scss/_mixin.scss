@@ -1,0 +1,59 @@
+@mixin borderbottom {
+    border-bottom: 1px solid var(--base-border);
+}
+@mixin borderleft {
+    border-left: 1px solid var(--base-border);
+}
+@mixin bordertop {
+    border-top: 1px solid var(--base-border);
+}
+@mixin borderright {
+    border-right: 1px solid var(--base-border);
+}
+@mixin borderbottom2 {
+    border-bottom: 1px solid var(--base-border2);
+}
+@mixin borderleft2 {
+    border-left: 1px solid var(--base-border2);
+}
+@mixin bordertop2 {
+    border-top: 1px solid var(--base-border2);
+}
+@mixin borderright2 {
+    border-right: 1px solid var(--base-border2);
+}
+@mixin bdcir2 {
+    left: auto;
+    right: -2px;
+}
+@mixin bdcir3 {
+    top: auto;
+    bottom: -2px;
+}
+@mixin bdcir4 {
+    left: auto;
+    top: auto;
+    right: -2px;
+    bottom: -2px;
+}
+
+// 리셋으로 넘김(대비용으로 살려둠)
+@mixin cir {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 1px;
+    height: 1px;
+    background: var(--base-border-cir);
+}
+
+// em강조
+@mixin emdeco {
+    margin-right: 8px;
+    background: #303e41;
+    padding: 2px 4px;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 2px #54d9f7;
+    font-size: 0.85rem;
+}

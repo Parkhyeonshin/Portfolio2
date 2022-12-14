@@ -1,0 +1,275 @@
+// 변수 설정
+:root {
+    --white: #fff;
+    --black: #000;
+
+    --bg-light: #f0eeeb;
+    --base-border: #66818abe;
+    --base-border2: #89a7b1cc;
+    --base-border3: #66818a62;
+    --base-border-cir: #8da5adaf;
+    // --base-border-cir: #98b1b9de;
+    // --base-border: #66818a;
+
+    --bg-dark: #111;
+    --bg-dark-border: #2e2e30;
+
+    --font-size: 15px;
+    --font-height: 1;
+    --font-color: #619a9b;
+    --font-color2: #babea3;
+    --font-color3: #fa6949;
+    --font-color4: #dfdfdf;
+    --font-color5: #c6d7dd;
+    --font-main: "MonoplexKR-Regular";
+    --font-main2: "Ailerons Trial Version";
+    --font-main3: "Blanka";
+    --font-main4: "Exan";
+    --font-main5: "Neuron";
+    --font-main6: "Kostar";
+    --font-main7: "Quantum";
+}
+// $변수?
+$Alldelay: 0s;
+
+// border-box 초기화
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// 가로모드 글씨 확대 초기화
+html {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+// 공백 초기화
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+// 폰트 초기화
+body,
+button,
+input,
+select,
+table,
+textarea {
+    font-size: var(--font-size);
+    line-height: var(--font-height);
+    color: var(--font-color);
+    font-family: var(--font-main4), -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+        "Open Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// 링크 초기화
+a,
+a:hover,
+a:focus {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+// 버튼 초기화
+// button,
+// html input[type="button"],
+// input[type="reset"],
+// input[type="submit"] {
+//   -webkit-appearance: button;
+//   cursor: pointer;
+// }
+
+// 버튼 디자인 초기화
+input,
+textarea,
+button,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    font-size: var(--font-size);
+}
+
+// 스타일 초기화
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+strong {
+    font-weight: normal;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+table {
+    border: 0;
+    border-collapse: collaspe;
+    border-spacing: 0;
+    width: 100%;
+}
+/* 이미지 대체(ir) */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 블라인드 효과 */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// 외곽선 도트
+.bdcir {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: 3px;
+    height: 3px;
+    // border-radius: 5px;
+    background: var(--base-border-cir);
+}
+.bdcir.flash {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: -2px;
+    width: 3px;
+    height: 3px;
+    // border-radius: 5px;
+    background: var(--base-border-cir);
+    animation: bdcirflash $Alldelay + 2s infinite;
+}
+
+// cursor
+#cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    pointer-events: none;
+
+    .cursorpointer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 35px;
+        background: url(../img/cursor_normal.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: 9999999;
+        pointer-events: none;
+    }
+    .cursordesc {
+        position: absolute;
+        top: 0;
+        left: 30px;
+        width: fit-content;
+        height: fit-content;
+        display: inline-block;
+        padding: 0px;
+        z-index: 9999998;
+        > div {
+            display: inline-block;
+            width: 100%;
+            height: fit-content;
+            background: rgba(0, 0, 0, 1);
+            display: none;
+            position: relative;
+            > span {
+                // opacity: 0;
+                display: none;
+                min-width: 3px;
+                color: var(--font-color5);
+                text-shadow: -1px 0 var(--font-color), 0 1px var(--font-color), 1px 0 var(--font-color), 0 -1px #000;
+                &.active {
+                    // opacity: 1;
+                    display: inline-block;
+                    // transition: all 0.5s ease;
+                    position: relative;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: -13px;
+                width: 13px;
+                height: 100%;
+                background: var(--font-color2);
+                z-index: 9999998;
+                opacity: 1;
+                animation: blinkText 1.5s infinite step-end; //인트로에 타자와 같은 애니메이션사용
+                &.active {
+                }
+            }
+        }
+        > .cursorblink {
+        }
+    }
+}

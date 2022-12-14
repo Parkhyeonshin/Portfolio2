@@ -1,0 +1,1303 @@
+$multiplier: 28;
+$bar-width: 6px;
+$bar-height: 10px;
+#header {
+    width: 19%;
+    min-width: 350px;
+    // min-height: 910px;
+    // height: 910px;
+    height: calc(910px - 20px);
+    margin-right: 1%;
+    .profileWrap {
+        width: 100%;
+        @include borderbottom;
+        @include bordertop;
+        position: relative;
+        opacity: 0;
+        animation: Startheadertop 0.6s $Alldelay forwards;
+        > span {
+            &:nth-of-type(1) {
+                left: auto;
+                right: -2px;
+            }
+        }
+        .logoWrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            @include borderbottom;
+            position: relative;
+            > span {
+                &:nth-of-type(1) {
+                    top: auto;
+                    left: auto;
+                    right: -3px;
+                    bottom: -2px;
+                }
+            }
+            .logo {
+                width: 45%;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -1px;
+                    width: 100%;
+                    height: 1px;
+                    background: var(--base-border2);
+                }
+                > span {
+                    &:nth-of-type(1) {
+                        height: 10%;
+                        display: block;
+                        position: relative;
+                        @include borderleft;
+                        @include borderright;
+                        > span {
+                            &:nth-of-type(1) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                top: -2px;
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                top: auto;
+                                bottom: -2px;
+                                left: -2px;
+                            }
+                        }
+                    }
+                }
+                > .glitch {
+                    width: 70%;
+                    height: 70%;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    position: relative;
+                    > .glitch__img {
+                        width: 100%;
+                        height: 100%;
+                        // background-image: url(https://cdn.pixabay.com/photo/2022/04/02/20/22/robot-7107688_960_720.png);
+                        background-image: url("../img/logo2.png");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        // transform: scale(1) translateX(-5px);
+                        transform: translate3d(0, 0, 0);
+                        background-blend-mode: none;
+                        position: absolute;
+                        top: 0;
+                        left: -2px;
+                        &:nth-child(n + 2) {
+                            opacity: 0;
+                        }
+                        &:nth-child(n + 2) {
+                            animation-duration: 5s;
+                            animation-delay: $Alldelay + 2s;
+                            animation-timing-function: ease;
+                            animation-iteration-count: infinite;
+                        }
+                        &:nth-child(2) {
+                            background-color: transparent;
+                            background-blend-mode: difference;
+                            animation-name: glitch-anim-1;
+                        }
+                        &:nth-child(3) {
+                            background-color: transparent;
+                            background-blend-mode: difference;
+                            animation-name: glitch-anim-2;
+                        }
+                        &:nth-child(4) {
+                            width: 60%;
+                            left: 20%;
+                            margin: 0 auto;
+                            background-color: var(--font-color3);
+                            background-blend-mode: overlay;
+                            animation-name: glitch-anim-3;
+                        }
+                        &:nth-child(5) {
+                            width: 80%;
+                            background-color: transparent;
+                            background-blend-mode: color;
+                            animation-name: glitch-anim-flash;
+                        }
+                    }
+                }
+                > span {
+                    &:nth-last-of-type(1) {
+                        height: 20%;
+                        display: block;
+                        position: relative;
+                        @include borderleft;
+                        @include borderright;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: -1px;
+                            width: 100%;
+                            height: 1px;
+                            background: var(--base-border2);
+                        }
+                        > .bdcir {
+                            &:nth-of-type(2) {
+                                left: auto;
+                                top: -2px;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                left: auto;
+                                top: auto;
+                                bottom: -2px;
+                                right: -2px;
+                            }
+                        }
+                        > span {
+                            &:nth-last-of-type(1) {
+                                display: block;
+                                width: 100%;
+                                height: 50%;
+                                position: relative;
+                                @include borderbottom;
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -2px;
+                                    left: 20%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background: #f34e5fb7;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    bottom: -2px;
+                                    left: 50%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background: rgba(255, 235, 205, 0.753);
+                                }
+                                > .bdcir {
+                                    &:nth-of-type(2) {
+                                        left: -2px;
+                                        top: auto;
+                                        bottom: -2px;
+                                    }
+                                    &:nth-of-type(3) {
+                                        left: auto;
+                                        top: auto;
+                                        bottom: -2px;
+                                        right: -2px;
+                                    }
+                                    &:nth-of-type(4) {
+                                        top: auto;
+                                        bottom: -2px;
+                                        left: 80%;
+                                        background: var(--font-color);
+                                        &::after {
+                                            content: "";
+                                            position: absolute;
+                                            top: 30%;
+                                            left: 59%;
+                                            transform: translate(-50%, -50%);
+                                            width: 15px;
+                                            height: 15px;
+                                            border-radius: 50%;
+                                            border: 1px solid #f34e5fb7;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > div {
+                width: 55%;
+                .logoName {
+                    // padding: 10px 8px;
+                    padding-top: 10px;
+                    width: 100%;
+                    // height: 55px;
+                    min-height: 70px;
+                    display: flex;
+                    align-items: center;
+                    @include borderbottom2;
+                    position: relative;
+                    > span {
+                        &:nth-of-type(1) {
+                            top: auto;
+                            bottom: -2px;
+                        }
+                        &:nth-of-type(2) {
+                            top: auto;
+                            left: auto;
+                            bottom: -2px;
+                            right: -2px;
+                        }
+                    }
+                    > p {
+                        display: block;
+                        width: 100%;
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-size: 1.6rem;
+                        font-family: var(--font-main5);
+                        color: var(--font-color2);
+                        letter-spacing: 0.2rem;
+                        margin-left: 0.3rem;
+                        // line-height: 70px;
+                    }
+                    > div {
+                        &:nth-of-type(1) {
+                            position: absolute;
+                            top: 2px;
+                            left: -4px;
+                            font-size: 0.2rem;
+                            transform: scale(0.6);
+                            display: inline-block;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                width: 50%;
+                                height: 1px;
+                                bottom: -2px;
+                                left: 1px;
+                                background: var(--font-color2);
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+                .currentTime {
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    @include borderbottom;
+                    margin-bottom: 4px;
+                    position: relative;
+                    color: #a4bfbaad;
+                    font-weight: normal;
+                    font-family: var(--font-main2);
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 1px;
+                        height: 20%;
+                        right: -1px;
+                        bottom: 20%;
+                        background: var(--base-border);
+                    }
+                    > .bdcir {
+                        &:nth-of-type(2) {
+                            top: auto;
+                            left: auto;
+                            bottom: 20%;
+                            right: -2px;
+                        }
+                        &:nth-of-type(3) {
+                            top: auto;
+                            left: auto;
+                            bottom: 40%;
+                            right: -2px;
+                        }
+                        &:nth-of-type(4) {
+                            top: auto;
+                            left: auto;
+                            bottom: -2px;
+                            right: -3px;
+                        }
+                        &:nth-of-type(5) {
+                            top: auto;
+                            bottom: -2px;
+                        }
+                    }
+                }
+            }
+        }
+        .infoWrap {
+            display: flex;
+            position: relative;
+            height: 175px;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -1px;
+                width: 55%;
+                height: 1px;
+                background: var(--base-border2);
+            }
+            > div {
+                &:nth-of-type(1) {
+                    width: 45%;
+                    height: 97%;
+                    @include borderbottom;
+                    position: relative;
+                    > div {
+                        &:nth-of-type(1) {
+                            height: 32%;
+                            width: 100%;
+                            @include borderleft;
+                            position: relative;
+                            > .bdcir {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                        }
+                        &.humanimg {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -44%);
+                            width: 70%;
+                            margin: 0 auto;
+                            height: 75%;
+                            overflow: hidden;
+                            border-top-left-radius: 15px;
+                            border-top-right-radius: 15px;
+                            img {
+                                vertical-align: bottom;
+                            }
+                        }
+                    }
+                    > .bdcir {
+                        top: auto;
+                        bottom: -2px;
+                    }
+                }
+            }
+
+            .headerInfoDesc {
+                width: 55%;
+                height: 97%;
+                @include borderbottom2;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 50%;
+                    background: var(--base-border);
+                    bottom: 0;
+                }
+                > div {
+                    &:nth-of-type(1) {
+                        height: 14%;
+                        height: fit-content;
+                        position: relative;
+                        @include borderbottom;
+                        > .bdcir {
+                            &:nth-of-type(1) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+                        > p {
+                            padding: 8px 4px;
+
+                            display: block;
+                            font-size: 1rem;
+                            text-align: center;
+                            > em {
+                                @include emdeco;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        margin: 0 auto;
+                        height: 100%;
+                        position: relative;
+                        > div {
+                            &:nth-of-type(1) {
+                                width: 57%;
+                                margin: 0 auto;
+                                margin-top: 1%;
+                                height: 100%;
+                                // background: url("/임시이미지.svg");
+                                background: url("https://i.pinimg.com/originals/fe/84/4c/fe844cbda6fa537f1f2bfe47551f6de3.gif");
+                                // background: url(../img/image47.jpg);
+                                // background: url(https://i.pinimg.com/originals/37/6a/5e/376a5e92ac739ac5919f0f0bf44e0a99.gif);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                            }
+                            &:nth-of-type(2) {
+                                position: absolute;
+                                top: 70%;
+                                left: 10px;
+                                font-size: 0.1rem;
+                            }
+                            &:nth-of-type(3) {
+                                position: absolute;
+                                top: 70%;
+                                right: 16px;
+                                font-size: 0.5rem;
+                            }
+                        }
+                    }
+                }
+                > .bdcir {
+                    &:nth-of-type(1) {
+                        top: auto;
+                        left: -1px;
+                        bottom: 50%;
+                    }
+                    &:nth-of-type(2) {
+                        top: auto;
+                        left: -1px;
+                        bottom: -2px;
+                    }
+                    &:nth-of-type(3) {
+                        top: auto;
+                        left: auto;
+                        right: -2px;
+                        bottom: -2px;
+                    }
+                }
+            }
+            > .bdcir {
+                &:nth-of-type(1) {
+                    top: auto;
+                    bottom: -2px;
+                }
+                &:nth-of-type(2) {
+                    top: auto;
+                    left: auto;
+                    right: -2px;
+                    bottom: -2px;
+                }
+                &:nth-of-type(3) {
+                    top: auto;
+                    left: auto;
+                    right: 55%;
+                    bottom: -2px;
+                    transform: translateX(55%);
+                }
+            }
+        }
+    }
+    .headerContWrap {
+        margin-top: 30px;
+        min-height: 390px;
+        @include bordertop;
+        // @include borderbottom;
+        position: relative;
+        opacity: 0;
+        animation: Startheadermid 0.6s $Alldelay + 0.6s forwards;
+
+        > div {
+            &:nth-of-type(1) {
+                padding: 10px 7px;
+                @include borderbottom;
+                position: relative;
+                > p {
+                    text-align: center;
+                    > em {
+                        @include emdeco;
+                    }
+                }
+                > .bdcir {
+                    &:nth-of-type(2) {
+                        left: auto;
+                        right: -2px;
+                    }
+                    &:nth-of-type(3) {
+                        top: auto;
+                        bottom: -2px;
+                    }
+                    &:nth-of-type(4) {
+                        top: auto;
+                        left: auto;
+                        bottom: -2px;
+                        right: -2px;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                margin-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include borderright;
+                > div {
+                    width: 25%;
+                    padding: 5px 10px;
+                    height: 60px;
+                    padding-top: 8px;
+                    @include borderright;
+                    position: relative;
+                    &:nth-child(1) {
+                        @include borderleft;
+                        width: 50%;
+
+                        > p {
+                            text-align: center;
+                            letter-spacing: 0.25rem;
+                            &:first-child {
+                                font-weight: bold;
+                                > em {
+                                    color: var(--font-color2);
+                                    font-weight: normal;
+                                    font-style: normal;
+                                }
+                            }
+                            &:nth-child(2) {
+                                letter-spacing: 0.4rem;
+                                font-size: 0.2rem;
+                            }
+                        }
+                        > div {
+                            margin-top: 13px;
+                            width: 100%;
+                            height: 5px;
+                            background: var(--base-border);
+                            @include borderleft2;
+                            @include borderright2;
+                            position: relative;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: -11px;
+                                right: 30%;
+                                transform: translateX(5px);
+                                border-top: 8px solid var(--font-color3);
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                animation: techgraphtarget 3s $Alldelay + 12s infinite cubic-bezier(0.88, 0.65, 0.22, 0.6);
+                            }
+                            > div {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 30%;
+                                height: 100%;
+                                background: var(--font-color2);
+                                @include borderleft2;
+                                border-color: var(--font-color3);
+                                animation: techgraphBar 3s $Alldelay + 12s infinite cubic-bezier(0.17, 0.81, 0.59, 0.65);
+                            }
+                        }
+                        > span {
+                            &:nth-of-type(2) {
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(3) {
+                                top: auto;
+                                bottom: -2px;
+                            }
+                            &:nth-of-type(4) {
+                                top: auto;
+                                left: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        > table {
+                            // border: 1px solid var(--base-border);
+                            text-align: center;
+                            border-collapse: collapse;
+                            border-spacing: 0;
+                            font-size: 0.8rem;
+                            tr {
+                                > td {
+                                    @include borderleft;
+                                    @include borderbottom;
+                                }
+                                &:nth-child(1) td {
+                                    &:nth-child(1) {
+                                        border-left: none;
+                                    }
+                                }
+                                &:nth-child(2) td {
+                                    &:nth-child(1) {
+                                        border-left: none;
+                                    }
+                                }
+                                &:nth-child(3) td {
+                                    &:nth-child(1) {
+                                        border-left: none;
+                                        border-bottom: none;
+                                    }
+                                    &:nth-child(2) {
+                                        border-bottom: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        > span {
+                            &:nth-of-type(1) {
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                left: auto;
+                                top: auto;
+                                bottom: -2px;
+                                right: -2px;
+                            }
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        border: none;
+                        > span {
+                            &:nth-of-type(1) {
+                                left: auto;
+                                right: -2px;
+                            }
+                            &:nth-of-type(2) {
+                                left: auto;
+                                top: auto;
+                                right: -2px;
+                                bottom: -2px;
+                            }
+                        }
+                        > div {
+                            margin: 0 auto;
+                            width: 80%;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                margin-top: 20px;
+                > div {
+                    @include borderleft;
+                    // @include borderright;
+                    margin-bottom: 16px;
+                    position: relative;
+
+                    > div {
+                        &:nth-of-type(1) {
+                            padding: 5px 10px;
+                            margin: 0 auto;
+
+                            display: flex;
+                            align-items: center;
+                            > em {
+                                font-size: 0.8rem;
+                                margin-right: 2px;
+                            }
+                            > p {
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .graph {
+                        width: 82%;
+                        height: 7px;
+                        // background: var(--base-border);
+                        border: 1px solid var(--base-border);
+                        // border-radius: 2px;
+                        margin: 0 auto;
+                        margin-left: 48px;
+                        margin-top: 5px;
+                        position: relative;
+                        // overflow: hidden;
+
+                        .graphBar {
+                            // position: absolute;
+                            // top: 0;
+                            // left: 0;
+                            // width: 90%;
+                            position: relative;
+                            height: 100%;
+                            background: var(--base-border);
+                            border-radius: 2px;
+                            &.graphBar_js {
+                                width: 0%;
+                                animation: graphjs 1.5s $Alldelay + 6s ease-out forwards;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1px;
+                                    width: 2px;
+                                    height: 98%;
+                                    background: var(--font-color2);
+                                    border-top-right-radius: 1px;
+                                    border-bottom-right-radius: 1px;
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphjsCount 1.5s $Alldelay + 6s forwards;
+                                }
+                            }
+                            &.graphBar_css {
+                                width: 0%;
+                                animation: graphcss 1.5s $Alldelay + 7s ease-out forwards;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1px;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphcssCount 1.5s $Alldelay + 7s forwards;
+                                }
+                            }
+                            &.graphBar_php {
+                                width: 0%;
+                                animation: graphphp 1.5s $Alldelay + 8s ease-out forwards;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1px;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphphpCount 1.5s $Alldelay + 8s forwards;
+                                }
+                            }
+                            &.graphBar_react {
+                                width: 0%;
+                                animation: graphreact 1.5s $Alldelay + 9s ease-out forwards;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1px;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphreactCount 1.5s $Alldelay + 9s forwards;
+                                }
+                            }
+                            &.graphBar_vue {
+                                width: 0%;
+                                animation: graphvue 1.5s $Alldelay + 10s ease-out forwards;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1px;
+                                    width: 2px;
+                                    height: 100%;
+                                    background: var(--font-color2);
+                                }
+                                .graphCount {
+                                    position: absolute;
+                                    top: -20px;
+                                    right: -15px;
+                                    font-size: 1rem;
+                                    opacity: 0;
+                                    animation: graphvueCount 1.5s $Alldelay + 10s forwards;
+                                }
+                            }
+                        }
+                    }
+                    > span {
+                        &:nth-of-type(2) {
+                            top: auto;
+                            bottom: -2px;
+                        }
+                    }
+                    .graphCount {
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        display: block;
+                        color: var(--font-color2);
+                        font-size: 12px;
+                        transform: translate(0, 6%);
+                        font-family: var(--font-main2);
+                    }
+                }
+            }
+        }
+
+        // > .bdcir {
+        //     &:nth-of-type(1) {
+        //         top: auto;
+        //         bottom: -2px;
+        //     }
+        //     &:nth-of-type(2) {
+        //         top: auto;
+        //         left: auto;
+        //         right: -2px;
+        //         bottom: -2px;
+        //     }
+        // }
+    }
+    .headerLastWrap {
+        margin-top: 20px;
+        height: 150px;
+        @include bordertop;
+        position: relative;
+        > div {
+            &:nth-child(1) {
+                width: 100%;
+                margin: 0 auto;
+                padding: 5px 7px;
+                @include borderbottom;
+                position: relative;
+                > span {
+                    &:nth-of-type(2) {
+                        left: auto;
+                        right: -2px;
+                    }
+                    &:nth-of-type(3) {
+                        top: auto;
+                        bottom: -2px;
+                    }
+                    &:nth-of-type(4) {
+                        top: auto;
+                        bottom: -2px;
+                        left: auto;
+                        right: -2px;
+                    }
+                }
+                > p {
+                    display: block;
+                    width: fit-content;
+                    padding: 3px 10px;
+                    margin: 0 auto;
+                    text-align: center;
+                    position: relative;
+                    > em {
+                        @include emdeco;
+                    }
+                    > span {
+                        border-radius: 50%;
+                        border: 1px solid var(--base-border2);
+                        background: none;
+                        width: 4px;
+                        height: 4px;
+                        &:nth-of-type(2) {
+                            left: auto;
+                            right: -2px;
+                        }
+                        &:nth-of-type(3) {
+                            top: auto;
+                            bottom: -2px;
+                        }
+                        &:nth-of-type(4) {
+                            left: auto;
+                            top: auto;
+                            bottom: -2px;
+                            right: -2px;
+                        }
+                        &:nth-of-type(5) {
+                            left: auto;
+                            top: auto;
+                            bottom: -3px;
+                            right: 50%;
+                        }
+                        &:nth-of-type(6) {
+                            left: auto;
+                            top: -3px;
+                            right: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .music__wrap {
+            padding: 10px 4px;
+            > .music__inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                // @include borderbottom;
+                // @include bordertop;
+                padding: 5px 0;
+                > .music__left {
+                    width: 45%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    @include borderright;
+                    > .music__circle {
+                        width: 80px;
+                        height: 80px;
+                        background: var(--base-border);
+                        border-radius: 50%;
+                        border: 2px solid var(--base-border2);
+                        box-shadow: inset 0px 0px 0px 3px var(--bg-dark);
+                        position: relative;
+                        transform: rotate(-390deg);
+                        transition: transform 0.6s ease-out;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 59%;
+                            height: 59%;
+                            background: var(--bg-dark);
+                            border-radius: 50%;
+                            border: 3px solid var(--bg-dark);
+                            box-shadow: inset 0px 0px 0px 3px var(--base-border2);
+                        }
+                        > div {
+                            position: absolute;
+                            width: 0;
+                            height: 0;
+                            border-bottom: 5px solid transparent;
+                            border-top: 5px solid transparent;
+                            border-left: 8px solid var(--font-color3);
+                            border-right: 0px solid transparent;
+                            right: 0px;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            z-index: 1;
+                        }
+                    }
+                    > .music__list {
+                        width: calc(75% - 80px);
+                        margin-left: 15%;
+                        > ul {
+                            li {
+                                display: block;
+                                width: 100%;
+                                height: 16px;
+                                background: url(../img/music__list1.svg);
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                display: block;
+                                transition: all 0.6s ease-out;
+                                position: relative;
+                                margin-bottom: 10px;
+                                cursor: pointer;
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                                > span {
+                                    top: 50%;
+                                    left: -12px;
+                                    transform: translate(0, -50%);
+                                    &:nth-of-type(2) {
+                                        left: auto;
+                                        right: 12px;
+                                    }
+                                }
+                                &.active {
+                                    display: block;
+                                    background: url(../img/music__list2.svg);
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    transition: all 0.3s ease-out;
+                                }
+                            }
+                        }
+                    }
+                }
+                > .music__right {
+                    width: 54%;
+                    .music__control {
+                        display: flex;
+                        align-items: center;
+                        width: 80%;
+                        margin: 0 auto;
+                        margin-bottom: 10px;
+                        margin-left: 25px;
+                        > div {
+                            width: 50%;
+                            transition: all 0.3s ease;
+                            cursor: pointer;
+                            &:nth-child(1) {
+                                height: 35px;
+                                background: url(../img/music__stop.png);
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                            }
+                            &:nth-child(2) {
+                                > p {
+                                    font-size: 1.6rem;
+                                    // color: var(--font-color3);
+                                    color: #444;
+                                    letter-spacing: 0.15rem;
+                                    transition: color 0.6s ease;
+                                }
+                            }
+                        }
+                        &.active {
+                            > div {
+                                &:nth-of-type(1) {
+                                    background: url(../img/music__play.png);
+                                    background-size: contain;
+                                    background-repeat: no-repeat;
+                                    background-position: center center;
+                                }
+                            }
+                        }
+                    }
+
+                    .music__equal {
+                        width: 95%;
+                        height: 60px;
+                        margin: 0 auto;
+                        transform: translate(0, 10%);
+                        position: relative;
+
+                        // background: url(../img/music__equal.jpg);
+
+                        // transform-origin: bottom;
+                        .graphic-equalizer {
+                            width: $multiplier * $bar-width;
+                            height: $multiplier * $bar-height;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -80%);
+                            // margin-top: -($multiplier * $bar-height)/1.01;
+                            // margin-left: -($multiplier * $bar-width) / 3.6;
+                            .bars {
+                                width: 5px;
+                                height: 10px;
+                                position: absolute;
+                                background: url(../img/equaltest-g.svg);
+                                opacity: 0.8;
+                                bottom: 0;
+                                @for $i from 1 to $multiplier + 1 {
+                                    &:nth-child(#{$i}) {
+                                        // left: ($i * $bar-width) - $bar-width;
+                                        left: ($i * $bar-width) + $bar-width;
+                                    }
+                                }
+                                // &.bars-green {
+                                //     background-position: left bottom;
+                                //     background-position: -7px 0;
+                                // }
+                                &.bars-red {
+                                    // background-position: center bottom;
+                                    background: url(../img/equaltest-r.svg);
+                                }
+                                &.bars-white {
+                                    // background-position: right bottom;
+                                    background: url(../img/equaltest-w.svg);
+                                }
+                                &.bars-blue {
+                                    // background-position: right bottom;
+                                    background: url(../img/equaltest-y.svg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        > span {
+            &:nth-of-type(1) {
+                left: -3px;
+                top: auto;
+                bottom: -2px;
+            }
+            &:nth-of-type(2) {
+                left: auto;
+                right: -2px;
+                top: auto;
+                bottom: -2px;
+            }
+        }
+    }
+    .nomeanLineHeader {
+        width: 100%;
+        height: 5px;
+        @include borderbottom;
+        @include bordertop;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            top: -1px;
+            right: 0;
+            height: 1px;
+            background: var(--base-border2);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 60%;
+            bottom: -1px;
+            right: 0;
+            height: 1px;
+            background: var(--base-border2);
+        }
+        > span {
+            &:nth-of-type(1) {
+                left: 40%;
+                top: -2px;
+                transform: translate(-40%);
+            }
+            &:nth-of-type(2) {
+                left: -2px;
+                top: auto;
+                bottom: -2px;
+                transform: translate(-40%);
+            }
+            &:nth-of-type(3) {
+                left: 40%;
+                top: auto;
+                bottom: -2px;
+                transform: translate(-40%);
+            }
+            &:nth-of-type(4) {
+                left: auto;
+                top: auto;
+                right: -3px;
+                bottom: -2px;
+                transform: translate(-40%);
+            }
+        }
+    }
+    .nomeanLine2Header {
+        display: flex;
+        position: relative;
+        margin-top: -2px;
+        height: 15px;
+        > div {
+            position: relative;
+            &:nth-of-type(1) {
+                width: 40.2%;
+                text-align: left;
+                > span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7) translateX(-10%);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 60%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                width: fit-content;
+                margin-right: 8px;
+                > span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 60%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                width: fit-content;
+                > span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 60%;
+                        left: -2px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                position: absolute;
+                right: -2px;
+                bottom: 0;
+                width: fit-content;
+                text-align: right;
+                > span {
+                    font-size: 0.2rem;
+                    display: inline-block;
+                    transform: scale(0.7) translateX(12%);
+                    em {
+                        font-weight: bold;
+                        color: var(--font-color2);
+                    }
+                    &.bdcir {
+                        width: 2px;
+                        height: 2px;
+                        top: 60%;
+                        left: 7px;
+                        transform: translate(0, -15%);
+                    }
+                }
+            }
+            // span {
+            //     font-size: 0.2rem;
+            //     display: inline-block;
+            //     transform: scale(0.7);
+            //     em {
+            //         font-weight: bold;
+            //         color: var(--font-color2);
+            //     }
+            // }
+            // .bdcir {
+            //     width: 2px;
+            //     height: 2px;
+            //     top: 50%;
+            //     left: -2px;
+            //     transform: translate(0, -15%);
+            // }
+        }
+    }
+}
