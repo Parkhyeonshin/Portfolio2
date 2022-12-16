@@ -1336,7 +1336,7 @@
                                 height: 100%;
                                 padding: 1%;
                                 background: rgba(0, 0, 0, 0.8);
-                                z-index: 600;
+                                z-index: 1000;
                                 display: none;
                                 align-items: center;
                                 &.active {

@@ -223,7 +223,7 @@ table {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        z-index: 9999999;
+        z-index: 9001;
         pointer-events: none;
     }
     .cursordesc {
@@ -234,7 +234,7 @@ table {
         height: fit-content;
         display: inline-block;
         padding: 0px;
-        z-index: 9999998;
+        z-index: 9000;
         > div {
             display: inline-block;
             width: 100%;
@@ -262,7 +262,7 @@ table {
                 width: 13px;
                 height: 100%;
                 background: var(--font-color2);
-                z-index: 9999998;
+                z-index: 9000;
                 opacity: 1;
                 animation: blinkText 1.5s infinite step-end; //인트로에 타자와 같은 애니메이션사용
                 &.active {
