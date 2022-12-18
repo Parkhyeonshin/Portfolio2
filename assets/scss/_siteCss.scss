@@ -7,27 +7,46 @@
     background: rgba(0, 0, 0, 0.9);
     z-index: 7000;
     padding: 1.5% 4%;
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
-        opacity: 0.5;
-        top: 0;left: 0;
-        background: url(../img/site임시.jpg);
+        top: 0;
+        left: 0;
+        background: url(../img/site임시1.png);
         background-size: 100% 100%;
-}
+    }
     .section3Wrap {
         width: 100%;
         height: 100%;
         border: 1px solid snow;
         display: grid;
-        grid-template-areas: 
-        'header siteview'
-        'nav siteview'
-        'source study'
-        ;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: ;
+        grid-template-areas:
+            "header siteview"
+            "siteNav siteview"
+            "studyDesc sourceView";
+        grid-template-columns: 48% 52%;
+        grid-template-rows: 25% 25% 50%;
+        .siteHeader {
+            grid-area: header;
+            background: #c5c5c5;
+        }
+        .siteNav {
+            grid-area: siteNav;
+            background: #f5f5f5;
+        }
+        .siteView {
+            grid-area: siteview;
+            background: #a4ce98;
+        }
+        .studyDesc {
+            grid-area: studyDesc;
+            background: #b68383;
+        }
+        .sourceView {
+            grid-area: sourceView;
+            background: #8c8c8c;
+        }
     }
 }
